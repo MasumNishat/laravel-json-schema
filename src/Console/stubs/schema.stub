@@ -1,0 +1,8 @@
+<?php
+
+use Masum\JsonSchema\Schema;
+
+return Schema::object()
+    ->property('id', Schema::string()->format('uuid'))
+    ->property('name', Schema::string()->minLength(1)->maxLength(255))
+    ->required(['id', 'name']);
